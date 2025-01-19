@@ -1,0 +1,109 @@
+@startuml
+
+entity "Pembeli" as Pbl {
+    + Email : string <<PK>>
+    --
+    Nama : string
+    Email Referal : string <<FK>>
+}
+
+entity "Penjual" as Pjl {
+    + Email : string <<PK>>
+    --
+    Nama : string
+}
+
+entity "Barang" as Brg {
+    + SKU : int
+    --
+    Nama : string
+    Harga : int
+    --
+    EmailPjl : string <<FK>>
+}
+
+entity "Barang Laptop" as Lpt {
+    SKU : int <<FK>>
+    ---
+    CPU : string
+    RAM : string
+    Disk : string
+}
+
+entity "Barang Pakaian" as Pkan {
+    SKU : int <<FK>>
+    ---
+    Ukuran : string
+    Warna : string
+}
+
+entity "Dompet" as Dpt {
+    + Email : string
+    ---
+    Saldo : int
+    ---
+    EmailPbl : string <<FK>>
+}
+
+entity "Membeli" as Pmbl{
+    Email_Pbl : string <<FK>>
+    SKU : int <<FK>>
+    Kode_Bank : string <<FK>>
+    ---
+    Jumlah : int
+}
+
+' entity "Menyukai" as Suka {
+'     Email : string <<FK>>
+'     SKU : int <<FK>>
+' } 
+
+entity "Alamat" as Almt {
+    + Kode : int
+    ---
+    Jalan : string
+    Kota : string
+    Provnsi : string 
+    ---
+    EmailPbl : string <<FK>>
+}
+entity "Bank" as Bank {
+    + Kode : string <<PK>>
+    ---
+    Nama : string
+}
+
+Pbl ||--o| Dpt
+note on link
+    Memiliki
+end note
+
+Pbl }o-- Pmbl : "Membeli"
+Brg }|-- Pmbl
+Bank }|-- Pmbl 
+
+Pbl }o--o{ Brg
+note on link
+    Menyukai
+end note
+Pjl ||--o{ Brg
+note on link
+    Menjual
+end note
+Pbl ||--o{ Almt
+note on link
+    Memiliki
+end note
+Brg ||--o| Lpt
+note on link
+    ISA
+end note
+Brg ||--o| Pkan : "ISA"
+note on link
+    ISA
+end note
+Pbl ||--o{ Pbl : "Email Referal"
+
+
+
+@enduml

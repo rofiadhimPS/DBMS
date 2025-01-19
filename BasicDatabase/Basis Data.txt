@@ -1,0 +1,35 @@
+Basis data = tempat menyimpan data (data->representasi fakta dunia nyata yang mewakili suatu objek, ex: manusia, barang, hewan dll)
+
+Operasi Basis Data 
+ - Create, membuat data
+ - Read, membaca data
+ - Update, mengubah data
+ - Delete, menghapus data
+
+Tujuan basis data
+ - Speed, kecepatan mengambil data
+ - Space, efisiensi ruang penyimpanan
+ - Accuray, keakuratan data
+ - Availability, ketersedian data
+ - Completeness, kelengkapan data,
+ - Security, keamanan data,
+ - Shareability, kemudahan untuk berbagi data
+
+Contoh Penerapan: Bank, Rumah Sakit(rekam medis dll), Sekolah(data pelajar, guru, dll), Toko Online (data pelanggan, transaksi dll)
+
+Basis data (database) perlu ada yang melakukan pengolahan datanya yaitu aplikasi (software/perangkat lunak)
+ # aplikasi + basis data = sistem basis data (database management system)
+ # komponen sistem basis data
+    - hardware, (komputer, server dll)
+    - Sistem Operasi, (Windos, MacOS, Linux)
+    - Aplikasi, (Mysql, Sql Server, PostgreSQL dll)
+    - User(pengguna)
+    - Aplikasi lain
+
+Bahasa Basis Data
+  - DDL (Data Definition Language)
+  - DML (Data Manipulation Language)
+
+  # DDL membuat struktur bentuk dari basis data, membuat dan menghapus table/file, membuat nama kolom, tipe data
+  # DML memanipulasi data setelah struktur basis data dibuat menggunakan DDL, (menambah, mengubah, menghapus, mencari data dalam tabel)
+
