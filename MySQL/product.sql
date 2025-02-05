@@ -29,3 +29,11 @@ SELECT * FROM products;
 
 SELECT id, name, price, quantity FROM products;
 
+UPDATE products
+SET id = 'P0004'
+WHERE name = 'Mie Ayam Spesial';
+
+ALTER TABLE products
+ADD PRIMARY KEY (id);
+
+DESCRIBE products;
