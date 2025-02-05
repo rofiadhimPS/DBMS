@@ -119,6 +119,14 @@ SELECT * FROM products WHERE quantity > 100 OR price > 20000;
 
 SELECT * FROM products WHERE (category = 'Makanan' OR quantity > 500) AND price > 20000;
 
+SELECT * FROM products WHERE name LIKE '%mie%';
+
+SELECT * FROM products WHERE name LIKE '%bakso%';
+
+SELECT * FROM products where description IS NULL;
+
+SELECT * FROM products where description IS NOT NULL;
+
 
 
 
