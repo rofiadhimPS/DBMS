@@ -156,6 +156,7 @@ SELECT id, COS(price), SIN(price), TAN(price) FROM products;
 
 SELECT id, name, price FROM products WHERE price DIV 1000 > 15;
 
+SELECT id, LOWER(name) as 'Name Lower', UPPER(name) as 'Name Upper', LENGTH(name) as 'Name Length' FROM products;
 
 
 
