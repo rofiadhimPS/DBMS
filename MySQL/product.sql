@@ -134,6 +134,11 @@ SELECT * FROM products where price NOT BETWEEN 10000 AND 20000;
 SELECT * FROM products WHERE category IN ('Makanan', 'Minuman');
 SELECT * FROM products WHERE category NOT IN ('Makanan', 'Minuman');
 
+SELECT id, category, name FROM products ORDER BY category;
+
+SELECT id, category, price, name FROM products ORDER BY category ASC, price DESC;
+
+
 
 
 
