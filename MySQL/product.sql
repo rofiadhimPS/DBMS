@@ -127,6 +127,13 @@ SELECT * FROM products where description IS NULL;
 
 SELECT * FROM products where description IS NOT NULL;
 
+SELECT * FROM products where price BETWEEN 10000 AND 25000;
+
+SELECT * FROM products where price NOT BETWEEN 10000 AND 20000;
+
+SELECT * FROM products WHERE category IN ('Makanan', 'Minuman');
+SELECT * FROM products WHERE category NOT IN ('Makanan', 'Minuman');
+
 
 
 
