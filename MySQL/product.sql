@@ -138,6 +138,16 @@ SELECT id, category, name FROM products ORDER BY category;
 
 SELECT id, category, price, name FROM products ORDER BY category ASC, price DESC;
 
+SELECT * FROM products ORDER BY id LIMIT 5;
+
+SELECT * FROM products ORDER BY id LIMIT 3;
+
+SELECT * FROM products ORDER BY id LIMIT 0, 5;
+
+SELECT * FROM products ORDER BY id LIMIT 5, 5;
+
+
+
 
 
 
