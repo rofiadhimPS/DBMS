@@ -11,3 +11,21 @@ CREATE TABLE products
 
 SHOW TABLES;
 DESC products;
+
+INSERT INTO products(id, name, price, quantity)
+VALUES ('P0001', 'Mie Ayam Original', 15000, 100);
+
+SELECT * FROM products;
+
+INSERT INTO products(id, name, description, price, quantity)
+VALUES ('P0002', 'Mie Ayam Bakso', 'Mie Ayam Original + Bakso', 25000, 100);
+
+INSERT INTO products(id, name, price, quantity)
+VALUES ('P0003', 'Mie Ayam Ceker', 20000, 100),
+       ('P0003', 'Mie Ayam Spesial', 25000, 100),
+       ('P0005', 'Mie Ayam Yamin', 15000, 100);
+
+SELECT * FROM products;
+
+SELECT id, name, price, quantity FROM products;
+
