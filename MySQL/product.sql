@@ -77,4 +77,18 @@ DELETE FROM products WHERE ID = 'P0009';
 
 SELECT * FROM products;
 
+SELECT id AS 'Kode', 
+       name AS 'Nama',
+       category AS 'Kategori', 
+       price AS 'Harga', 
+       quantity AS 'Stok'
+FROM products;
+
+SELECT p.id AS 'Kode', 
+       p.name AS 'Nama',
+       p.category AS 'Kategori', 
+       p.price AS 'Harga', 
+       p.quantity AS 'Stok'
+FROM products AS p;
+
 
