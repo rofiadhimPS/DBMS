@@ -181,3 +181,13 @@ FROM products;
 
 SELECT id, name, IFNULL(description, 'Kosong') FROM products;
 
+SELECT COUNT(id) as 'Total Product' FROM products; 
+
+SELECT MAX(price) as 'Product Termahal' FROM products;
+
+SELECT MIN(price) as 'Product Termurah' FROM products;
+
+SELECT AVG(price) as 'Rata-rata harga' FROM products;
+
+SELECT SUM(quantity) as 'Total Stock' FROM products;
+
