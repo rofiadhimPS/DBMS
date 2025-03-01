@@ -165,7 +165,19 @@ FROM products;
 
 SELECT id, created_at, YEAR(created_at), MONTH(created_at) FROM products;
 
+SELECT id, 
+    category,
+    CASE category
+        WHEN 'Makanan' THEN 'Enak'
+        WHEN 'Minuman' THEN 'Segar'
+        ELSE 'Apa itu?'
+        END AS 'Category'
+from products;
 
+SELECT id, 
+    price,
+    IF(price <= 15000, 'Murah', IF(price <= 20000, 'Mahal', 'Mahal Banget')) as 'Mahal'
+FROM products;
 
-
+SELECT id, name, IFNULL(description, 'Kosong') FROM products;
 
